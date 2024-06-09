@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="body">
+        <div id="left">
+
+            <p>下一块</p>
+            <div id="next">
+                <canvas id="nextBlock" width="100px" height="100px"></canvas>
+            </div>
+
+            <p>得分</p>
+            <div id="score">0</div>
+    
+            <div id="tip">
+                <p>W:翻转</p>
+                <p>A:左移</p>
+                <p>D:右移</p>
+                <p>S:加速</p>
+                <p>空格:暂停</p>
+            </div>
+    
+    
+            <button id="rank">排行榜</button>
+    
+        </div>
+        <canvas id="canvas" width="300px" height="500px"></canvas>
+        <div id="right">
+            
+    
+            <p>方块下落速度</p>
+            <!-- <input type="text" id="speed" placeholder="下落一格所需时间(s)"> -->
+            <input type="text" id="speed" placeholder="1秒下落几格">
+    
+            <p>方块形状选择</p>
+            <div id="type">
+                <label><input type="checkbox" name="block" value="0" checked><i>全选</i></label>
+                <label><input type="checkbox" name="block" value="1"><i>I型</i></label>
+                <label><input type="checkbox" name="block" value="2"><i>O型</i></label>
+                <label><input type="checkbox" name="block" value="3"><i>L型</i></label>
+                <label><input type="checkbox" name="block" value="4"><i>J型</i></label>
+                <label><input type="checkbox" name="block" value="5"><i>S型</i></label>
+                <label><input type="checkbox" name="block" value="6"><i>Z型</i></label>
+                <label><input type="checkbox" name="block" value="7"><i>T型</i></label>
+            </div>
+
+            <p>方块纹理选择</p>
+            <select name="texture" id="texture">
+                <option value="solid" selected>实心方块</option>
+                <option value="stripes1">交叉条纹</option>
+                <option value="stripes2">正对角线</option>
+                <option value="stripes3">反对角线</option>
+            </select>
+            
+
+            <p>颜色选择</p>
+            <div id="color">
+                <input type="color" id="color1" class="colors" value="#4bbad3">
+                <input type="color" id="color2" class="colors" value="#e6e34f">
+                <input type="color" id="color3" class="colors" value="#e99a50">
+                <input type="color" id="color4" class="colors" value="#dd3b9c">
+                <input type="color" id="color5" class="colors" value="#4fd388">
+                <input type="color" id="color6" class="colors" value="#d13f3d">
+            </div>
+
+            <div id="button">
+                <button id="start">开始</button>
+                <button id="pause">暂停</button>
+                <button id="restart">重来</button>
+            </div>
+        </div>
+    
+        <!-- 弹窗 -->
+        <div id="popup">
+            <span id="closeBtn" onclick="closePopup()">X</span>
+            <h2>排行榜</h2>
+            <ul id="list"></ul>
+        </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
